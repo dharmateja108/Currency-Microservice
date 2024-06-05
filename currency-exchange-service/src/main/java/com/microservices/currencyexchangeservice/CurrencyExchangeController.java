@@ -21,14 +21,12 @@ public class CurrencyExchangeController {
 		
 //		CurrencyExchange currencyExchange = new CurrencyExchange(1000L, from, to,BigDecimal.valueOf(50));
 		CurrencyExchange currencyExchange = repo.findByFromAndTo(from, to);
-		
+//		CurrencyExchange currencyExchange = repo.findByFromAndTo(from, to);
 		if(currencyExchange == null) {
 			throw new RuntimeException("Unable to find the data for " + from  + " to" + to );
 		}
 		String port = environment.getProperty("local.server.port");
 		currencyExchange.setEnvironment(port);
-		return currencyExchange;
-		
+		return currencyExchange;	
 	}
-	
 }
