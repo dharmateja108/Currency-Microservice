@@ -60,7 +60,9 @@ public class CurrencyExchange {
 	}
 	
 	
-	
+	public void newFun(){
+		System.out.println("NEW Funciton added");
+	}
 	
 	
 	
